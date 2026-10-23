@@ -54,10 +54,6 @@ namespace Calc
                     case "*":
                         result = num1 * num2;
                         break;
-                    /*
-                    case "-":
-                        result = num1 - num2;
-                        break;
                     case "/":
                         if (num2 == 0)
                         {
@@ -68,7 +64,13 @@ namespace Calc
                         {
                             result = num1 / num2;
                         }
-                        break;*/
+                        break;
+
+                    /*
+                    case "-":
+                        result = num1 - num2;
+                        break;
+                    */
                     default:
                         Console.WriteLine("Ошибка: неизвестная операция!");
                         validOperation = false;
