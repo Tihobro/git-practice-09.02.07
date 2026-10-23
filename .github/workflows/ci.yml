@@ -1,0 +1,26 @@
+name: CI
+
+# 1. Указываем триггеры: запускать при push и pull_request в ветку main (или любую другую)
+on:
+  push:
+    branches: [ "main", "feature/*" ]
+  pull_request:
+    branches: [ "main" ]
+
+# 2. Описываем, какие задачи (jobs) нужно выполнить
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest # Запуск на виртуальной машине Linux
+
+    steps:
+    # Шаг для копирования кода репозитория на виртуальную машину
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # Имитация запуска линтера
+    - name: Run Linter
+      run: echo "Linter check passed successfully!"
+
+    # Имитация запуска тестов
+    - name: Run Tests
+      run: echo "Tests passed"
